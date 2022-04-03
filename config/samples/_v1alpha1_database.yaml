@@ -1,0 +1,6 @@
+apiVersion: kubepostgres.dev/v1alpha1
+kind: Database
+metadata:
+  name: database-sample
+spec:
+  # TODO(user): Add fields here

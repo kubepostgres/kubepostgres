@@ -1,0 +1,15 @@
+domain: kubepostgres.dev
+layout:
+- go.kubebuilder.io/v3
+projectName: kubepostgres
+repo: github.com/kubepostgres/kubepostgres
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: kubepostgres.dev
+  kind: Database
+  path: github.com/kubepostgres/kubepostgres/api/v1alpha1
+  version: v1alpha1
+version: "3"
