@@ -1,80 +1,17 @@
-# kubepostgres
-// TODO(user): Add simple overview of use/purpose
+<img src="https://avatars.githubusercontent.com/u/86821982" align="right" />
 
-## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+# KubePostgres
+> **Managed Databases for PostgreSQL**
 
-## Getting Started
-You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
-**Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![codecov](https://codecov.io/gh/kubepostgres/kubepostgres/branch/main/graph/badge.svg?token=2O8CPMI63Y)](https://codecov.io/gh/kubepostgres/kubepostgres)
+[![CI](https://github.com/kubepostgres/kubepostgres/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/kubepostgres/kubepostgres/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kubepostgres/kubepostgres)](https://goreportcard.com/report/github.com/kubepostgres/kubepostgres)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/kubepostgres/kubepostgres/blob/main/docs/CONTRIBUTING.md)
 
-### Running on the cluster
-1. Install Instances of Custom Resources:
-
-```sh
-kubectl apply -f config/samples/
-```
-
-2. Build and push your image to the location specified by `IMG`:
-
-```sh
-make docker-build docker-push IMG=<some-registry>/kubepostgres:tag
-```
-
-3. Deploy the controller to the cluster with the image specified by `IMG`:
-
-```sh
-make deploy IMG=<some-registry>/kubepostgres:tag
-```
-
-### Uninstall CRDs
-To delete the CRDs from the cluster:
-
-```sh
-make uninstall
-```
-
-### Undeploy controller
-UnDeploy the controller from the cluster:
-
-```sh
-make undeploy
-```
-
-## Contributing
-// TODO(user): Add detailed information on how you would like others to contribute to this project
-
-### How it works
-This project aims to follow the Kubernetes [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
-
-It uses [Controllers](https://kubernetes.io/docs/concepts/architecture/controller/),
-which provide a reconcile function responsible for synchronizing resources until the desired state is reached on the cluster.
-
-### Test It Out
-1. Install the CRDs into the cluster:
-
-```sh
-make install
-```
-
-2. Run your controller (this will run in the foreground, so switch to a new terminal if you want to leave it running):
-
-```sh
-make run
-```
-
-**NOTE:** You can also run this in one step by running: `make install run`
-
-### Modifying the API definitions
-If you are editing the API definitions, generate the manifests such as CRs or CRDs using:
-
-```sh
-make manifests
-```
-
-**NOTE:** Run `make --help` for more information on all potential `make` targets
-
-More information can be found via the [Kubebuilder Documentation](https://book.kubebuilder.io/introduction.html)
+---
+## WARNING: This project is a work in progress and not ready for production use.
+---
 
 ## License
 
@@ -91,4 +28,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-

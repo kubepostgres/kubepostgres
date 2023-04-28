@@ -17,25 +17,23 @@ limitations under the License.
 package v1alpha1
 
 import (
+	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // DatabaseSpec defines the desired state of Database
 type DatabaseSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// specifies the container image of PostgreSQL
+	// +kubebuilder:validation:Required
+	ContainerImage string `json:"containerImage"`
 
-	// Foo is an example field of Database. Edit database_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// specifies persistent volume claim to store data
+	// +kubebuilder:validation:Required
+	VolumeClaim corev1.PersistentVolumeClaimSpec `json:"volumeClaim"`
 }
 
 // DatabaseStatus defines the observed state of Database
 type DatabaseStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
 }
 
 //+kubebuilder:object:root=true
